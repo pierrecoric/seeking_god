@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "init-env": "bash scripts/init-env.sh",
+        "test": "bash scripts/test.sh",
+        "seeking": "bash scripts/seeking.sh",
+        "commit-all": "bash scripts/commit-all.sh"
+    }
+}
