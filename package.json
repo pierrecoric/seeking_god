@@ -2,7 +2,7 @@
     "scripts": {
         "init-env": "bash scripts/init-env.sh",
         "test": "bash scripts/test.sh",
-        "seeking": "bash scripts/seeking.sh",
+        "seek-god": "bash scripts/seek-god.sh",
         "commit-all": "bash scripts/commit-all.sh"
     }
 }

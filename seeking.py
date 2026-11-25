@@ -38,7 +38,7 @@ class Spinner:
 url = "https://en.wikipedia.org/wiki/Existence"
 url_looking_for = "https://en.wikipedia.org/wiki/God"
 looking_for = "God"
-counter = 0
+counter = 1
 found = False
 
 # Clear the screen at the start.
@@ -64,10 +64,16 @@ while not found:
         print(f"\n{counter}. visited {title} at {url}\n")
         with open("output/history.md", "a") as file:
             file.write(f"{counter}. visited [{title}]({url})\n\n")
+        with open("output/poem.txt", "a") as file:
+            file.write(f"step N°{counter}: {title}. ")
 
-        counter += 1
+        
 
         if title == looking_for:
+            with open("output/history.md", "a") as file:
+                file.write(f"Found {looking_for} after visiting {counter} pages.\n")
+            with open("output/poem.txt", "a") as file:
+                file.write(f"found God.")
             print(f"Found {looking_for} after visiting {counter} pages!\n")
             found = True
 
@@ -128,6 +134,7 @@ while not found:
                 else:
                     print("No working links found on this page.")
                     break
+        counter += 1
 
     except Exception as e:
         print(f"Error accessing {url}: {e}")
